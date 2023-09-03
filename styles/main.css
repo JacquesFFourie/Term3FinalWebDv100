@@ -44,12 +44,12 @@ button {
 }
 
 .nav-link:hover {
-    color: #18382B;
+    color: #182238;
 }
 
 .nav-link.active {
-    border-bottom: 2px solid #18382B;
-    color: #18382B;
+    border-bottom: 2px solid #181d38;
+    color: #181938;
 }
 
 
@@ -96,7 +96,7 @@ button {
 }
 
 .card-text {
-    color: #18382B;
+    color: #182338;
 }
 
 /* ---------------------------------------------------------------- */
@@ -123,4 +123,8 @@ button {
     padding-top: 50px;
     width: 90%;
     margin: 20px;
+}
+.logoH:hover{
+    height: 50px;
+    width: 80px;
 }

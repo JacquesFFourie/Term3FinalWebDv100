@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plant Shop - Browse</title>
+    <title>Cruise Adventure - Browse</title>
 
     <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/Term3FinalWebDv100/styles/main.css">
   </head>
   <body>
 
@@ -19,7 +19,7 @@
         
         <!-- Logo -->
         <a class="navbar-brand" href="#">
-          <img src="assets/Logo.svg" alt="Logo" height="32">
+          <img src="assets/newAssets/Untitled-1.png" alt="Logo" height="32" class="logoH">
         </a>
 
         <!-- Nav Items -->
@@ -41,7 +41,7 @@
     <div class="container mt-5 pt-5">
 
         <!-- Header -->
-        <h2>Browse Plants</h2>
+        <h2>Browse Cruises</h2>
         
         <!-- ---------------------------------------------------------------------------------------------------- -->
         <!-- Filters and Sorts -->
@@ -51,23 +51,23 @@
           <!-- Filter Radio Buttons -->
 
           <div class="btn-group col-auto" role="group">
-            <input type="radio" class="btn-check" name="filterRadio" id="allPlantsFilter" value="" autocomplete="off" checked>
-            <label class="btn btn-outline-success" for="allPlantsFilter">All Cruises</label>
+            <input type="radio" class="btn-check" name="filterRadio" id="allCruiseFilter" value="" autocomplete="off" checked>
+            <label class="btn btn-outline-sprimary" for="allCruiseFilter">All Cruises</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" autocomplete="off" value="low">
-            <label class="btn btn-outline-success" for="brightLightFilter"><i class="bi-brightness-high"></i> Less than 5 day travel</label>
+            <label class="btn btn-outline-sprimary" for="brightLightFilter"><i class="bi-brightness-high"></i> Less than 5 day travel</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" autocomplete="off" value="bright">
-            <label class="btn btn-outline-success" for="lowLightFilter"><i class="bi-brightness-low"></i> More than 5 day travel</label>
+            <label class="btn btn-outline-sprimary" for="lowLightFilter"><i class="bi-brightness-low"></i> More than 5 day travel</label>
 
             <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" autocomplete="off" value="bright">
-            <label class="btn btn-outline-success" for="lowLightFilter"><i class="bi-brightness-low"></i> Single Destination</label>
+            <label class="btn btn-outline-sprimary" for="lowLightFilter"><i class="bi-brightness-low"></i> Single Destination</label>
 
             <input type="radio" class="btn-check" name="filterRadio" id="brightLightFilter" autocomplete="off" value="low">
-            <label class="btn btn-outline-success" for="brightLightFilter"><i class="bi-brightness-high"></i> Multi Destination</label>
+            <label class="btn btn-outline-sprimary" for="brightLightFilter"><i class="bi-brightness-high"></i> Multi Destination</label>
           
             <input type="radio" class="btn-check" name="filterRadio" id="lowLightFilter" autocomplete="off" value="bright">
-            <label class="btn btn-outline-success" for="lowLightFilter"><i class="bi-brightness-low"></i> Round Trip</label>
+            <label class="btn btn-outline-sprimary" for="lowLightFilter"><i class="bi-brightness-low"></i> Round Trip</label>
           </div>
 
           <!-- Sorting Radio Buttons -->
@@ -84,11 +84,11 @@
         </div>
 
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        <!-- Plants List Cards -->
+        <!-- cruises List Cards -->
 
         <div class="row py-5 gy-3" id="crouseContainer">
 
-          <!-- Plants cards are appended here -->
+          <!-- cruises cards are appended here -->
 
         </div>
         
@@ -97,21 +97,21 @@
     <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- Templates -->
 
-    <template id="plantCardTemplate">
+    <template id="cruiseCardTemplate">
       <div class="col-4 animate__animated animate__fadeInUp">
 
         <!-- Card -->
         <div class="card">
             <img src="assets/plant1.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h4 class="card-title" id="nameText">Ficus Tree</h4>
-              <p class="card-text" id="priceText">R320</p>
+              <h4 class="card-title" id="nameText">Tour de America</h4>
+              <p class="card-text" id="priceText">r6000</p>
 
               <!-- New -->
               <p class="card-text mt-4" id="originTemp">654</p>
 
 
-              <p class="card-text mt-4" id="descriptionText">Graceful and lush, this charming indoor plant boasts glossy, emerald-green leaves that effortlessly brighten any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior décor.</p>
+              <p class="card-text mt-4" id="descriptionText">Tour America.</p>
               <button type="button" class="btn btn-secondary" onclick = "makeCruise()">Add to Cart</button>
             </div>
           </div>

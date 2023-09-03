@@ -1,8 +1,6 @@
-// ------------------------------------------------------------------------
-// Plants Array
-// ------------------------------------------------------------------------
 
-const arrPlants = [
+
+const arrCruise = [
   {
     name: "China To Japan",
     price: 1500,
@@ -16,7 +14,7 @@ const arrPlants = [
   {
     name: "Tour de America",
     price: 6000,
-    description: "Delicate and captivating, this rare succulent showcases a mesmerizing silver-white hue that gracefully adorns its petite, fleshy leaves.",
+    description: "Take a trip around all of America!!",
     image: "452b3e49d4e64e50b938f398e057de78.jpg",
     cruiseTime: "bright",
     addedDate: "2023-05-01",
@@ -26,7 +24,7 @@ const arrPlants = [
   {
     name: "Johannesburg to Capetown",
     price: 1000,
-    description: "Boasting tall, sleek, and sword-like leaves, this botanical marvel adds a touch of modern flair to any setting.",
+    description: "Take a trip from Johannesburg to CapeTown!",
     image: "a673ca0733a5d876d1f55c3fe3edfea1.jpg",
     cruiseTime: "low",
     addedDate: "2023-07-04",
@@ -36,7 +34,7 @@ const arrPlants = [
   {
     name: "London to France",
     price: 1000,
-    description: "With its lush, feather-like fronds and compact size, this indoor beauty makes a striking addition to any interior space.",
+    description: "Take a trip from London to France!",
     image: "f832d54f5dc1f0681fc8b651e9037eed.jpg",
     cruiseTime: "low",
     addedDate: "2023-04-29",
@@ -46,7 +44,7 @@ const arrPlants = [
   {
     name: "North Japan to South Japan",
     price: 1200,
-    description: "Known for its stunning foliage that transforms with the seasons, this ornamental tree captivates with its delicate, lacy leaves in vibrant shades of red, orange, or gold.",
+    description: "See everything there is to see of Japan by going from the most norhten point to the most southern point",
     image: "bd1a6cc511bc54e60587c83f010d7aaa.jpg",
     cruiseTime: "bright",
     addedDate: "2023-05-10",
@@ -75,31 +73,31 @@ $(document).ready(function(){
     // ------------------------------------------------------------------
     // Browse
 
-    filterSortPlants();
+    filterSortCruises();
 
 });
 
 // ------------------------------------------------------------------------
-// Load all plants
+// Load all cruises
 // ------------------------------------------------------------------------
 
-function loadPlants(crouseToShow) {
+function loadCruises(crouseToShow) {
 
-  // Clear all elements inside the plants cards container
+  // Clear all elements inside the cruises cards container
 
   $("#crouseContainer").empty();
 
-  // Loop though plants
+  // Loop though cruises
 
   for (let i = 0; i < crouseToShow.length; i++) {
-    const plant = crouseToShow[i];
+    const cruise = crouseToShow[i];
     
-    console.log(plant.name);
+    console.log(cruise.name);
 
     // Open weather API call for getting the temprature
     $.ajax({
       type: "GET",
-      url: "https://api.openweathermap.org/data/2.5/weather?q=" + plant.origin + "&appid=1734da151190ac7d50e318a7d39444f9",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + cruise.origin + "&appid=1734da151190ac7d50e318a7d39444f9",
       success: function (data) {
         tempData = data;
         console.log(tempData);
@@ -112,17 +110,17 @@ function loadPlants(crouseToShow) {
     
     });
 
-    // 1: Select the plants container add the plant card to it
-    $("#crouseContainer").append($("#plantCardTemplate").html());
+    // 1: Select the cruises container add the cruise card to it
+    $("#crouseContainer").append($("#cruiseCardTemplate").html());
 
-    // 2: Create a variable that contains the most recently added plant card
+    // 2: Create a variable that contains the most recently added cruise card
     let currentChild = $("#crouseContainer").children().eq(i);
 
-    // 3: Set the content for the current plant card from the plant array
-    $(currentChild).find("#nameText").text(plant.name);
-    $(currentChild).find("#priceText").text("R" + plant.price);
-    $(currentChild).find("#descriptionText").text(plant.description);
-    $(currentChild).find(".card-img-top").attr('src','../Term3FinalWebDv100/assets/newAssets/' + plant.image);
+    // 3: Set the content for the current cruise card from the cruise array
+    $(currentChild).find("#nameText").text(cruise.name);
+    $(currentChild).find("#priceText").text("R" + cruise.price);
+    $(currentChild).find("#descriptionText").text(cruise.description);
+    $(currentChild).find(".card-img-top").attr('src','../Term3FinalWebDv100/assets/newAssets/' + cruise.image);
 
     // 4: Hide the description text from the curent card
     $(currentChild).find("#descriptionText").hide();
@@ -139,43 +137,43 @@ function loadPlants(crouseToShow) {
 $("input[name='filterRadio']").click(function(){
   appliedFilter = $(this).attr('value');
 
-  filterSortPlants();
+  filterSortCruises();
 });
 
 $("input[name='sortRadio']").click(function(){
   appliedSort = $(this).attr('value');
 
-  filterSortPlants();
+  filterSortCruises();
 });
 
-function filterSortPlants() {
+function filterSortCruises() {
   
-  let filteredSortedArrPlants = [];
+  let filteredSortedArrCruise = [];
 
   console.log(appliedFilter);
   console.log(appliedSort);
 
-  // Filter Plants
+  // Filter cruises
 
   if (appliedFilter) {
-    filteredSortedArrPlants = arrPlants.filter(plant => plant.cruiseTime == appliedFilter);
+    filteredSortedArrCruise = arrCruise.filter(cruise => cruise.cruiseTime == appliedFilter);
   } else {
-    filteredSortedArrPlants = arrPlants;
+    filteredSortedArrCruise = arrCruise;
   }
 
-  // Sort Plants
+  // Sort cruises
 
   if (appliedSort == "low to high") {
 
-    // Sort plants from the lowest to highest price
-    filteredSortedArrPlants = filteredSortedArrPlants.sort((a, b) => {
+    // Sort cruises from the lowest to highest price
+    filteredSortedArrCruise = filteredSortedArrCruise.sort((a, b) => {
       return a.price - b.price;
     });
 
   } else if (appliedSort == "date added") {
 
-    // Sort plants from the newest to oldest
-    filteredSortedArrPlants = filteredSortedArrPlants.sort((a, b) => {
+    // Sort cruises from the newest to oldest
+    filteredSortedArrCruise = filteredSortedArrCruise.sort((a, b) => {
       let da = new Date(a.addedDate);
       let db = new Date(b.addedDate);
     
@@ -184,14 +182,14 @@ function filterSortPlants() {
 
   }
 
-  console.log(filteredSortedArrPlants)
+  console.log(filteredSortedArrCruise)
 
-  loadPlants(filteredSortedArrPlants);
+  loadCruises(filteredSortedArrCruise);
 
 }
 
 // ------------------------------------------------------------------------
-// When a plant card is clicked
+// When a cruise card is clicked
 // ------------------------------------------------------------------------
 
 $("#crouseContainer").on('click','.card', function() {
