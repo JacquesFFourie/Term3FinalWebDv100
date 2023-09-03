@@ -10,7 +10,8 @@ const arrPlants = [
     image: "08cfd33ef641d38397581cbeba5edef7.jpg",
     cruiseTime: "low",
     addedDate: "2023-03-25",
-    origin: "Tokyo"
+    origin: "Tokyo",
+    orderNum: "0"
   },
   {
     name: "Tour de America",
@@ -19,7 +20,8 @@ const arrPlants = [
     image: "452b3e49d4e64e50b938f398e057de78.jpg",
     cruiseTime: "bright",
     addedDate: "2023-05-01",
-    origin: "Florida"
+    origin: "Florida",
+    orderNum: "1"
   },
   {
     name: "Johannesburg to Capetown",
@@ -28,7 +30,8 @@ const arrPlants = [
     image: "a673ca0733a5d876d1f55c3fe3edfea1.jpg",
     cruiseTime: "low",
     addedDate: "2023-07-04",
-    origin: "Cape Town"
+    origin: "Cape Town",
+    orderNum: "2"
   },
   {
     name: "London to France",
@@ -37,7 +40,8 @@ const arrPlants = [
     image: "f832d54f5dc1f0681fc8b651e9037eed.jpg",
     cruiseTime: "low",
     addedDate: "2023-04-29",
-    origin: "Pretoria"
+    origin: "Pretoria",
+    orderNum: "3"
   },
   {
     name: "North Japan to South Japan",
@@ -46,7 +50,8 @@ const arrPlants = [
     image: "bd1a6cc511bc54e60587c83f010d7aaa.jpg",
     cruiseTime: "bright",
     addedDate: "2023-05-10",
-    origin: "Japan"
+    origin: "Japan",
+    orderNum: "4"
   },
 ];
 
@@ -235,3 +240,32 @@ $(document).ready(function(){
   });
 
 })
+let cruiseOrderInfo = [];
+makeCruise = () =>{
+  cruiseOrderInfo.push(  {
+    name: "China To Japan",
+    price: 1500,
+    description: "Take a trip from the island of Japan to the beaches of China!",
+    image: "08cfd33ef641d38397581cbeba5edef7.jpg",
+    cruiseTime: "low",
+    addedDate: "2023-03-25",
+    origin: "Tokyo",
+    orderNum: "0"
+  },
+  {
+    name: "Tour de America",
+    price: 6000,
+    description: "Delicate and captivating, this rare succulent showcases a mesmerizing silver-white hue that gracefully adorns its petite, fleshy leaves.",
+    image: "452b3e49d4e64e50b938f398e057de78.jpg",
+    cruiseTime: "bright",
+    addedDate: "2023-05-01",
+    origin: "Florida",
+    orderNum: "1"
+  })
+}
+
+checkout = () =>{
+  let data = JSON.stringify(cruiseOrderInfo)
+  localStorage.setItem('order', data)
+  window.location.href = "../Term3FinalWebDv100/cart.html"
+}

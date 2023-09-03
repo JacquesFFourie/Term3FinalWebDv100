@@ -118,3 +118,9 @@ button {
 .newTo{
     padding-top: 50px;
 }
+
+.list-group{
+    padding-top: 50px;
+    width: 90%;
+    margin: 20px;
+}
