@@ -9,7 +9,7 @@ This is a Term 3 final project for DV100 2023.
 
 * [About the Project](#about-the-project)
    * [Home](#home)
-   * [Browse Plants](#browse-plants)
+   * [Browse Cruises](#Browse-Cruises)
 * [Getting Started](#getting-started)
   * [Installing](#installing)
 * [Built With](#built-with)
@@ -20,15 +20,15 @@ This is a Term 3 final project for DV100 2023.
 
 ## About The Project
 
-Evergreen allows users to browse and filter different plants to find the perfect addition to their home.
+Sea Side Cruises allows users to book cruise shipping events.
 
 ### Home
 
-![EvergreenLogo](/assets/readme/readme_homepage.png)
+![CruiseLinerLogo](/Term3FinalWebDv100/Video/Screenshot%202023-09-03%20214238.png)
 
-### Browse Plants
+### Browse Cruises
 
-![EvergreenLogo](/assets/readme/readme_browsepage.png)
+![CruiseLinerLogo](/Term3FinalWebDv100/Video/Screenshot%202023-09-03%20214303.png)
 
 ## Getting Started
 
@@ -63,10 +63,10 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-* **Paul Loots** - *Javascript & HTML* - [PaulLoots](https://github.com/PaulLoots)
-* **Carlo Kuyper** - *Open Weather API* - [CarloOpenWindow](https://github.com/CarloOpenWindow)
+* **Jacques Fourie** - *Javascript & HTML* - [JacquesFourie](https://github.com/JacquesFFourie)
+* **Jacques Fourie** - *Open Weather API* - [JacquesFourie](https://github.com/JacquesFFourie)
 
-See also the list of [contributors](https://github.com/paulowi/DV100-T3-Class-Project-Test/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JacquesFFourie/Term3FinalWebDv100/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -74,6 +74,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgements
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thank you to Paul and carlo who taught me how to make this website.
+* Open window.
+
