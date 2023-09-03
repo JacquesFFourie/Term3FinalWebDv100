@@ -24,11 +24,11 @@ Sea Side Cruises allows users to book cruise shipping events.
 
 ### Home
 
-![CruiseLinerLogo](/Term3FinalWebDv100/Video/Screenshot%202023-09-03%20214238.png)
+![CruiseLinerLogo](/Term3FinalWebDv100/Screenshots/Screenshot%202023-09-03%20214238.png)
 
 ### Browse Cruises
 
-![CruiseLinerLogo](/Term3FinalWebDv100/Video/Screenshot%202023-09-03%20214303.png)
+![CruiseLinerLogo](/Term3FinalWebDv100/Screenshots/Screenshot%202023-09-03%20214303.png)
 
 ## Getting Started
 
